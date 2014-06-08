@@ -1,0 +1,10 @@
+{
+    "name": "velocity-curve",
+    "targetType": "executable",
+
+    "sourcePaths": ["."],
+
+    "dependencies": {
+        "jack": {"path": "../.."},
+    },
+}

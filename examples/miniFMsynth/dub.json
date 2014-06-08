@@ -1,0 +1,10 @@
+{
+    "name": "mini-fm-synth",
+    "targetType": "executable",
+
+    "sourcePaths": ["."],
+
+    "dependencies": {
+        "jack": {"path": "../.."},
+    },
+}

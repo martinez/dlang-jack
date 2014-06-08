@@ -1,0 +1,17 @@
+{
+    "name": "jack",
+    "description": "Idiomatic D API binding for the JACK Audio Connection Kit",
+    "copyright": "Copyright © 2014, denis",
+    "authors": ["denis"],
+    "license": "BSL-1.0",
+
+    "targetType": "sourceLibrary",
+    "sourcePaths": ["libjack"],
+    "importPaths": ["libjack"],
+    "libs": ["jack"],
+
+    "subPackages": [
+        "examples/miniFMsynth",
+        "examples/velocityCurve",
+    ],
+}
