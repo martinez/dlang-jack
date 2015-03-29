@@ -58,7 +58,7 @@ struct jack_master_t {
     int midi_output;                    // master MIDI physical inputs (-1 to take slave wanted MIDI outputs)
     jack_nframes_t buffer_size;         // mater buffer size
     jack_nframes_t sample_rate;         // mater sample rate
-    char master_name[MASTER_NAME_SIZE]; // master machine name
+    char[MASTER_NAME_SIZE] master_name; // master machine name
 };
 
 /**

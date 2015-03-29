@@ -83,7 +83,7 @@ public:
 
   string[] get_aliases()
   {
-    const(char) *c_aliases[2];
+    const(char) *[2] c_aliases;
     int n = jack_port_get_aliases(handle_, c_aliases.ptr);
     if (n < 0) {
       throw new JackError("jack_port_get_aliases");

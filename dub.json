@@ -1,5 +1,6 @@
 {
     "name": "jack",
+    "version": "1.0.1",
     "description": "Idiomatic D API binding for the JACK Audio Connection Kit",
     "copyright": "Copyright © 2014, denis",
     "authors": ["denis"],

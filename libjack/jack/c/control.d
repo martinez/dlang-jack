@@ -63,7 +63,7 @@ union jackctl_parameter_value
     uint32_t ui;				/**< @brief member used for ::JackParamUInt */
     int32_t i;					/**< @brief member used for ::JackParamInt */
     char c;						/**< @brief member used for ::JackParamChar */
-    char str[JACK_PARAM_STRING_MAX + 1]; /**< @brief member used for ::JackParamString */
+    char[JACK_PARAM_STRING_MAX + 1] str; /**< @brief member used for ::JackParamString */
     bool b;				/**< @brief member used for ::JackParamBool */
 };
 
@@ -337,7 +337,7 @@ int
 jackctl_driver_params_parse(
     jackctl_driver_t * driver,
     int argc,
-    char* argv[]);
+    char*[] argv);
 
 /**
  * Call this function to get name of internal client.

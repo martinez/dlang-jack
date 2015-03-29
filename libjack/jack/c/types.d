@@ -599,7 +599,7 @@ struct jack_position_t {
     /* For binary compatibility, new fields should be allocated from
      * this padding area with new valid bits controlling access, so
      * the existing structure size and offsets are preserved. */
-    int32_t             padding[7];
+    int32_t[7]             padding;
 
     /* When (unique_1 == unique_2) the contents are consistent. */
     jack_unique_t       unique_2;       /**< unique ID */
