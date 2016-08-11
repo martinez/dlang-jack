@@ -81,7 +81,12 @@ public:
   JackMidiEvent front() {
     JackMidiEvent ev;
     int ret = jack_midi_event_get(&ev, ptr_, index_);
-    assert(ret == 0);
+    if (ret != 0) {
+        /* ENODATA -- jack api does not guarantee that it won't ENODATA even if index_ < get_event_count.
+           Setting size to 0 should prevent a sane programmer from accessing ev.buffer.
+         */
+        ev.size = 0;
+    }
     return ev;
   }
 
